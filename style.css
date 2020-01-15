@@ -1,0 +1,289 @@
+*,
+*:before,
+*:after{
+  padding:0;
+  margin:0;
+}
+
+html{
+  font-size: 93.75%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body{
+  background-color: hsl(240, 78%, 98%);
+}
+
+.container{
+  position:relative;
+  width:100%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.design-top{
+  height:80vh;
+  position:absolute;
+  top:0;
+  right:0;
+
+
+}
+
+.design-bottom{
+  position: absolute;
+  bottom:-3rem;
+  left:0;
+
+}
+
+
+header{
+  text-align: center;
+  padding:2rem;
+}
+
+.main-header{
+  margin-bottom:1.5rem;
+  color:hsl(233, 13%, 49%);
+}
+
+.toggle{
+  font-size: .8rem;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-text{
+  color:hsl(234, 14%, 74%);
+  display:inline-block;
+}
+
+/*styling for cards*/
+
+.pricing{
+  width:70%;
+  margin-left: auto;
+  margin-right: auto;
+  display:flex;
+  justify-content: center;
+  position: relative;
+  z-index: 100;
+  margin-bottom:12rem;
+}
+
+.card{
+  text-align: center;
+  padding:3rem;
+  background-color: #fff;
+  color:hsl(232, 13%, 33%);
+  width:15rem;
+}
+
+.card-middle
+{
+  text-align: center;
+  padding:3rem;
+  background-image: linear-gradient(to bottom, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color:#fff;
+  width:15rem;
+}
+
+.card-price-monthly,.card-price-annually{
+  padding-top:1rem;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+/*list decoration for both type cards*/
+.card-details ul,.card-details-middle ul{
+ list-style-type: none;
+ padding-bottom: 2rem;
+}
+
+.card-details li , .card-details-middle li{
+ padding:.7rem;
+}
+
+/*lines for white cards*/
+.card-details ul li{
+  border-bottom: 1px solid hsl(232, 13%, 33%);
+}
+
+.card-details ul li:first-child{
+  border-top: 1px solid hsl(232, 13%, 33%);
+}
+
+/*lines for purple card*/
+.card-details-middle ul li{
+  border-bottom: 1px solid #fff;
+}
+
+.card-details-middle ul li:first-child{
+  border-top: 1px solid #fff;
+}
+
+.card-middle , .card{
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+
+}
+
+.card-middle
+{
+  transform: scaleY(1.05);
+}
+
+/*button styling*/
+.btn{
+  width:100%;
+  padding:1rem;
+  border-radius: .5rem;
+  border:none;
+  background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color:#fff;
+  cursor: pointer;
+}
+
+.btn:hover
+{
+  background: #fff;
+  color:#000;
+  border:1px solid #000;
+}
+
+.btn-middle
+{
+  width:100%;
+  padding:1rem;
+  border-radius:.5rem;
+  border:none;
+  background-color:hsl(240, 78%, 98%);
+  cursor: pointer;
+}
+
+.btn-middle:hover
+{
+  background: hsl(237, 63%, 64%);
+  color:#fff;
+  border:1px solid #fff;
+}
+
+
+/*toggle switch*/
+.switch
+{
+  position:relative;
+  display: inline-block;
+  width:4rem;
+  height:2.5rem;
+  margin:1rem;
+}
+
+.inputtoggle
+{
+  opacity:0;
+  width:0;
+  height:0;
+}
+
+.slider
+{
+position:absolute;
+cursor:pointer;
+background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+top:0;
+left:0;
+right:0;
+bottom:0;
+-webkit-transition: .4s;
+transition:.4s;
+}
+
+.slider:before{
+  position:absolute;
+  content:"";
+  height:1.8rem;
+  width:1.8rem;
+  left:4px;
+  bottom:5px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+
+.inputtoggle:checked + .slider:before{
+  -webkit-transform: translateX(1.6rem);
+  -ms-transform: translateX(1.6rem);
+  transform: translateX(1.6rem);
+}
+
+.slider.round
+{
+  border-radius: 34px;
+}
+
+.slider.round:before
+{
+  border-radius: 50%;
+}
+
+/*toggle switch end*/
+
+/*display text acc to the toggle*/
+.card-price-monthly
+{
+  display:none;
+}
+
+/*display text acc to the toggle*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*reponsive*/
+
+@media only screen and (max-width:375px)
+{
+
+
+  .pricing{
+    width:80%;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+
+  .card{
+    box-shadow: none;
+    margin-bottom:2rem;
+  }
+
+  .card-middle
+  {
+    box-shadow: none;
+    transform: scaleY(1);
+    margin-bottom:2rem;
+
+  }
+
+  .card-price-monthly, .card-price-annually {
+    padding-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
+
+.design-bottom
+{
+  visibility: hidden;
+}
